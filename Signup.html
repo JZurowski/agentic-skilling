@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request access — Chegg Agentic Skilling</title>
+  <link rel="icon" href="assets/logos/favicon-mark.svg" />
+  <link rel="stylesheet" href="colors_and_type.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="marketing.css" />
+  <link rel="stylesheet" href="demo-flow.css" />
+</head>
+<body data-screen-label="Sign-up">
+
+  <script src="buyer.js"></script>
+
+  <main class="mk-auth">
+
+    <!-- Form panel -->
+    <section class="mk-auth-panel">
+      <div class="auth-head">
+        <a class="mk-brand" href="Marketing.html">
+          <span class="mk-brand-mark">cs</span>
+          Chegg Skills
+          <small>Agentic Skilling</small>
+        </a>
+        <span class="signin-link">Already have access? <a href="Define.html">Sign in</a></span>
+      </div>
+
+      <div class="mk-auth-body">
+        <p class="auth-eyebrow">Request access</p>
+        <h1>Tell us about your team, <strong>and we'll take it from there.</strong></h1>
+        <p class="lead">
+          We'll review your details and <strong>reach out within two business days</strong> to get you set up. Access is manually approved during the invite-only MVP.
+        </p>
+
+        <form class="auth-form" onsubmit="event.preventDefault(); const f = this.elements; window.saveBuyer({fullName: f.fullName.value, email: f.email.value, company: f.company.value, role: f.role.value, intent: f.intent.value}); window.location.href='SignupConfirmation.html';">
+
+          <div class="auth-field">
+            <label>Work email <span class="req">*</span></label>
+            <input type="email" name="email" required placeholder="you@company.com" autocomplete="email" />
+          </div>
+
+          <div class="auth-field">
+            <label>Full name <span class="req">*</span></label>
+            <input type="text" name="fullName" required placeholder="e.g. Priya Ramesh" autocomplete="name" />
+          </div>
+
+          <div class="auth-field">
+            <label>Company name <span class="req">*</span></label>
+            <input type="text" name="company" required placeholder="e.g. Northbeam" autocomplete="organization" />
+          </div>
+
+          <div class="auth-field">
+            <label>Role / title <span class="req">*</span></label>
+            <input type="text" name="role" required placeholder="e.g. Head of L&amp;D" autocomplete="organization-title" />
+          </div>
+
+          <div class="auth-field">
+            <label>
+              What are you hoping to build?
+              <span class="opt">Optional</span>
+            </label>
+            <textarea name="intent" placeholder="A short note about the team, the outcome, or the program you have in mind. Helps us prepare for the call."></textarea>
+            <span class="hint">Helpful context for the team that reaches out — never shared outside Chegg.</span>
+          </div>
+
+          <div class="auth-actions">
+            <button class="mk-btn mk-btn-primary mk-btn-lg" type="submit">
+              Request access
+              <i class="fa-solid fa-arrow-right" style="font-size:13px;"></i>
+            </button>
+            <a class="back-link" href="Marketing.html">
+              <i class="fa-solid fa-arrow-left"></i>
+              Back to overview
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="auth-foot">
+        <span><i class="fa-solid fa-shield-check"></i>SOC 2 · enterprise-ready</span>
+        <span class="sep"></span>
+        <span>Your details stay private</span>
+      </div>
+    </section>
+
+    <!-- Visual side -->
+    <aside class="mk-auth-visual" aria-hidden="true">
+      <div class="photo">
+        <img
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+          alt=""
+        />
+      </div>
+      <div class="pull-quote">
+        <div class="label">From a recent buyer call</div>
+        <p class="text">"We had a program live for our PMs before the kickoff meeting was on the calendar. <strong>Two days, not two months.</strong>"</p>
+        <span class="byline">— L&amp;D leader, Series C SaaS</span>
+      </div>
+    </aside>
+
+  </main>
+
+  <nav class="demo-flow" aria-label="Prototype walkthrough">
+    <span class="demo-flow-label"><span class="dot"></span>Prototype walkthrough</span>
+    <a class="step" href="Marketing.html"><span class="num">1</span><span class="label">Marketing</span></a>
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <a class="step active" href="Signup.html"><span class="num">2</span><span class="label">Sign-up</span></a>
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <a class="step" href="SignupConfirmation.html"><span class="num">3</span><span class="label">Confirmation</span></a>
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <a class="step" href="Define.html"><span class="num">4</span><span class="label">Define</span></a>
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <a class="step" href="Measure.html"><span class="num">5</span><span class="label">Measure</span></a>
+    <a class="restart" href="Marketing.html" title="Restart walkthrough"><i class="fa-solid fa-rotate-left"></i><span class="label">Restart</span></a>
+  </nav>
+
+</body>
+</html>

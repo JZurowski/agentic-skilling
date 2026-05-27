@@ -1,0 +1,216 @@
+/* ============================================================
+   Chegg Skills — Colors & Type
+   ------------------------------------------------------------
+   Brand: warm, empowering, premium. White foundation, simple
+   neutrals, Chegg Orange (#EB7100) as core accent. Type is Aspira
+   (web fallback Helvetica; mobile fallback Roboto / SF Pro).
+   ============================================================ */
+
+/* Aspira — licensed brand typeface (regular family / standard width) */
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-Light_2928216977.otf") format("opentype");
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-LightIt_3286401872.otf") format("opentype");
+  font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-Regular_1895498349.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-It_234578515.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-Medium_86173947.otf") format("opentype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-MediumIt_641722042.otf") format("opentype");
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-Demi_90665239.otf") format("opentype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-Bold_601067033.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-BoldIt_3781123032.otf") format("opentype");
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Aspira";
+  src: url("fonts/Aspira-Heavy_4173283734.otf") format("opentype");
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+
+:root {
+  /* ---------- Brand ---------- */
+  --color-orange-050: #FFF6F0;
+  --color-orange-100: #FFEEE1;
+  --color-orange-200: #FFE6D2;
+  --color-orange-300: #FFDDC3;
+  --color-orange-400: #FFC496;
+  --color-orange-500: #FFAB69;
+  --color-orange-600: #F9923C;
+  --color-orange-700: #F3821E;
+  --color-orange-800: #EB7100; /* Chegg Orange — primary accent */
+  --color-orange-900: #D15B00;
+
+  /* ---------- Neutrals (Greys) ---------- */
+  --color-neutral-050: #FBFAFB;
+  --color-neutral-100: #EEEEF1;
+  --color-neutral-200: #E2E1E6;
+  --color-neutral-300: #CAC8D1;
+  --color-neutral-400: #B2AFBB;
+  --color-neutral-500: #928E9F;
+  --color-neutral-600: #747283;
+  --color-neutral-700: #534F63;
+  --color-neutral-800: #474358;
+  --color-neutral-900: #302C41; /* Primary text on light */
+  --color-neutral-950: #242035;
+
+  /* ---------- Walnut (warm secondary) ---------- */
+  --color-walnut-050: #F3EAE6;
+  --color-walnut-300: #E0CABF;
+
+  /* ---------- Functional ---------- */
+  --color-success-100: #E6F6EE;
+  --color-success-300: #8FD9B0;
+  --color-success-500: #2AAC7E;
+  --color-success-700: #1F7A62;
+  --color-success-900: #134231;
+
+  --color-warning-100: #FFFBE9;
+  --color-warning-300: #FFDB4D;
+  --color-warning-500: #AC8B14;
+  --color-warning-700: #7D661F;
+  --color-warning-900: #473C2C;
+
+  --color-error-100: #FFEAE8;
+  --color-error-300: #FF8E86;
+  --color-error-500: #E5222F;
+  --color-error-700: #9E2131;
+  --color-error-900: #482034;
+
+  --color-info-100: #ECF5FF;
+  --color-info-300: #D9EBFF;
+  --color-info-500: #2E8AEE;
+  --color-info-700: #0B64C4;
+  --color-info-900: #263A63;
+
+  /* ---------- Semantic — Light Mode (default) ---------- */
+  --bg-canvas: #FFFFFF;
+  --bg-paper-01: #FFFFFF;
+  --bg-paper-02: var(--color-neutral-100);
+  --bg-paper-03: var(--color-neutral-200);
+  --bg-warm: var(--color-walnut-050);
+
+  --fg-primary: var(--color-neutral-900);
+  --fg-secondary: var(--color-neutral-600);
+  --fg-tertiary: var(--color-neutral-500);
+  --fg-on-accent: #FFFFFF;
+  --fg-link: var(--color-neutral-900);
+  --fg-link-hover: var(--color-orange-800);
+
+  --border-subtle: var(--color-neutral-200);
+  --border-default: var(--color-neutral-300);
+  --border-strong: var(--color-neutral-700);
+
+  --accent: var(--color-orange-800);
+  --accent-hover: var(--color-orange-900);
+  --accent-soft: var(--color-orange-100);
+
+  /* ---------- Shadows ---------- */
+  --shadow-raised: 0 1px 2px rgba(13,13,15,0.08), 0 1px 3px rgba(0,42,88,0.06);
+  --shadow-100:    0 2px 6px rgba(13,13,15,0.08), 0 1px 2px rgba(0,42,88,0.06);
+  --shadow-200:    0 6px 16px rgba(13,13,15,0.10), 0 2px 6px rgba(0,42,88,0.08);
+  --shadow-300:    0 16px 40px rgba(13,13,15,0.15), 0 4px 12px rgba(0,42,88,0.10);
+
+  /* ---------- Radii ---------- */
+  --radius-xs: 4px;
+  --radius-s:  8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ---------- Spacing scale (4-step base, T-shirt aliases) ---------- */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs:  6px;
+  --space-s:   8px;
+  --space-m:  12px;
+  --space-l:  16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+  --space-4xl: 40px;
+
+  /* ---------- Type ---------- */
+  --font-sans: "Aspira", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mobile: "Aspira", -apple-system, BlinkMacSystemFont, "SF Pro Text", Roboto, system-ui, sans-serif;
+
+  /* Display (Aspira Medium for headlines, Bold for emphasis) */
+  --type-display-1-size: 60px; --type-display-1-line: 1.05; --type-display-1-weight: 500; --type-display-1-tracking: -0.01em;
+  --type-display-2-size: 48px; --type-display-2-line: 1.08; --type-display-2-weight: 500; --type-display-2-tracking: -0.005em;
+
+  --type-h1-size: 40px; --type-h1-line: 1.15; --type-h1-weight: 500;
+  --type-h2-size: 32px; --type-h2-line: 1.20; --type-h2-weight: 500;
+  --type-h3-size: 26px; --type-h3-line: 1.25; --type-h3-weight: 700;
+  --type-h4-size: 22px; --type-h4-line: 1.30; --type-h4-weight: 700;
+  --type-h5-size: 18px; --type-h5-line: 1.35; --type-h5-weight: 700;
+
+  --type-body-1-size: 18px; --type-body-1-line: 1.50; --type-body-1-weight: 400;
+  --type-body-2-size: 16px; --type-body-2-line: 1.50; --type-body-2-weight: 400;
+  --type-body-3-size: 14px; --type-body-3-line: 1.50; --type-body-3-weight: 400;
+
+  --type-subtitle-size: 18px; --type-subtitle-line: 1.40; --type-subtitle-weight: 500;
+  --type-caption-size: 12px;  --type-caption-line: 1.30; --type-caption-weight: 400; --type-caption-tracking: 0.35px;
+  --type-overline-size: 12px; --type-overline-line: 1.10; --type-overline-weight: 700; --type-overline-tracking: 1.25px;
+
+  --type-button-l-size: 18px; --type-button-l-weight: 700;
+  --type-button-m-size: 16px; --type-button-m-weight: 500;
+  --type-button-s-size: 14px; --type-button-s-weight: 500;
+}
+
+/* ============================================================
+   Semantic typography classes (use directly on elements)
+   ============================================================ */
+html { font-family: var(--font-sans); color: var(--fg-primary); -webkit-font-smoothing: antialiased; }
+body { background: var(--bg-canvas); color: var(--fg-primary); margin: 0; }
+
+.t-display-1 { font: var(--type-display-1-weight) var(--type-display-1-size)/var(--type-display-1-line) var(--font-sans); letter-spacing: var(--type-display-1-tracking); }
+.t-display-2 { font: var(--type-display-2-weight) var(--type-display-2-size)/var(--type-display-2-line) var(--font-sans); letter-spacing: var(--type-display-2-tracking); }
+.t-h1 { font: var(--type-h1-weight) var(--type-h1-size)/var(--type-h1-line) var(--font-sans); }
+.t-h2 { font: var(--type-h2-weight) var(--type-h2-size)/var(--type-h2-line) var(--font-sans); }
+.t-h3 { font: var(--type-h3-weight) var(--type-h3-size)/var(--type-h3-line) var(--font-sans); }
+.t-h4 { font: var(--type-h4-weight) var(--type-h4-size)/var(--type-h4-line) var(--font-sans); }
+.t-h5 { font: var(--type-h5-weight) var(--type-h5-size)/var(--type-h5-line) var(--font-sans); }
+.t-body-1   { font: var(--type-body-1-weight) var(--type-body-1-size)/var(--type-body-1-line) var(--font-sans); letter-spacing: 0.25px; }
+.t-body-2   { font: var(--type-body-2-weight) var(--type-body-2-size)/var(--type-body-2-line) var(--font-sans); letter-spacing: 0.25px; }
+.t-body-3   { font: var(--type-body-3-weight) var(--type-body-3-size)/var(--type-body-3-line) var(--font-sans); letter-spacing: 0.25px; }
+.t-subtitle { font: var(--type-subtitle-weight) var(--type-subtitle-size)/var(--type-subtitle-line) var(--font-sans); }
+.t-caption  { font: var(--type-caption-weight) var(--type-caption-size)/var(--type-caption-line) var(--font-sans); letter-spacing: var(--type-caption-tracking); }
+.t-overline { font: var(--type-overline-weight) var(--type-overline-size)/var(--type-overline-line) var(--font-sans); letter-spacing: var(--type-overline-tracking); text-transform: uppercase; }
+
+.fg-primary   { color: var(--fg-primary); }
+.fg-secondary { color: var(--fg-secondary); }
+.fg-accent    { color: var(--accent); }
+
+a { color: var(--fg-link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--fg-link-hover); }

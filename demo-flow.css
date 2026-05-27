@@ -1,0 +1,112 @@
+/* Demo flow indicator — fixed footer pill across prototype pages.
+   Not part of product UI; visually marked as a presenter aid. */
+
+.demo-flow {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #242035;
+  color: white;
+  padding: 6px 8px 6px 16px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Aspira", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  z-index: 90;
+  box-shadow: 0 10px 30px rgba(13,13,15,0.28), 0 2px 8px rgba(0,0,0,0.2);
+  max-width: calc(100vw - 32px);
+  overflow: hidden;
+}
+.demo-flow .demo-flow-label {
+  color: rgba(255,255,255,0.48);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(255,255,255,0.14);
+  margin-right: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.demo-flow .demo-flow-label .dot {
+  width: 6px; height: 6px;
+  border-radius: 999px;
+  background: #2AAC7E;
+  animation: demo-flow-pulse 1.8s ease-in-out infinite;
+}
+@keyframes demo-flow-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.demo-flow .step {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px 5px 6px;
+  border-radius: 999px;
+  color: rgba(255,255,255,0.7);
+  font: 500 12.5px "Aspira", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 120ms, background 120ms;
+  white-space: nowrap;
+}
+.demo-flow .step .num {
+  width: 18px; height: 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.65);
+  font: 700 10px "Aspira", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.demo-flow .step:hover {
+  color: white;
+  background: rgba(255,255,255,0.06);
+}
+.demo-flow .step.active {
+  background: #EB7100;
+  color: white;
+  font-weight: 700;
+}
+.demo-flow .step.active .num {
+  background: rgba(255,255,255,0.22);
+  color: white;
+}
+.demo-flow .arrow {
+  color: rgba(255,255,255,0.28);
+  font-size: 9px;
+  padding: 0 1px;
+}
+
+.demo-flow .restart {
+  margin-left: 6px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255,255,255,0.14);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255,255,255,0.55);
+  font: 500 12px "Aspira", sans-serif;
+  text-decoration: none;
+  padding: 5px 12px 5px 14px;
+  border-radius: 999px;
+  transition: color 120ms, background 120ms;
+  white-space: nowrap;
+}
+.demo-flow .restart:hover {
+  color: white;
+  background: rgba(255,255,255,0.06);
+}
+.demo-flow .restart i { font-size: 10px; }
+
+@media (max-width: 820px) {
+  .demo-flow .step .label { display: none; }
+  .demo-flow .step { padding: 5px 6px; }
+}

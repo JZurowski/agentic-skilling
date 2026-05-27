@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You're on the list — Chegg Agentic Skilling</title>
+  <link rel="icon" href="assets/logos/favicon-mark.svg" />
+  <link rel="stylesheet" href="colors_and_type.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="marketing.css" />
+  <link rel="stylesheet" href="demo-flow.css" />
+</head>
+<body data-screen-label="Sign-up confirmation">
+
+  <script src="buyer.js"></script>
+
+  <main class="mk-auth confirm">
+
+    <section class="mk-auth-panel">
+      <div class="auth-head">
+        <a class="mk-brand" href="Marketing.html">
+          <span class="mk-brand-mark">cs</span>
+          Chegg Skills
+          <small>Agentic Skilling</small>
+        </a>
+        <span class="signin-link"><a href="Marketing.html">Back to overview</a></span>
+      </div>
+
+      <div class="mk-auth-body">
+        <span class="confirm-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m3 7 9 6 9-6"></path>
+          </svg>
+        </span>
+        <p class="auth-eyebrow">Request received</p>
+        <h1 id="confirm-headline">You're <strong>on the list.</strong></h1>
+        <p class="lead" id="confirm-lead">
+          Someone from the Chegg Skills team will <strong>reach out within two business days</strong> with next steps and access details.
+        </p>
+
+        <script>
+          (function () {
+            if (!window.BUYER || window.BUYER.firstName === "there") return;
+            const first = window.BUYER.firstName;
+            const co = window.BUYER.company;
+            const h = document.getElementById("confirm-headline");
+            const lead = document.getElementById("confirm-lead");
+            if (h) h.innerHTML = `${first}, you're <strong>on the list.</strong>`;
+            if (lead && co && co !== "Northbeam") {
+              lead.innerHTML = `Someone from the Chegg Skills team will <strong>reach out within two business days</strong> to get ${co} set up.`;
+            }
+          })();
+        </script>
+
+        <div class="confirm-meta">
+          <i class="fa-solid fa-circle-check"></i>
+          <span id="confirm-meta-text">We sent a confirmation to <strong>your work email</strong>. Add <strong>skills@chegg.com</strong> to your contacts so it doesn't get lost.</span>
+        </div>
+
+        <script>
+          (function () {
+            if (!window.BUYER || !window.BUYER.email || window.BUYER.email === "priya@northbeam.com") return;
+            const el = document.getElementById("confirm-meta-text");
+            if (el) el.innerHTML = `We sent a confirmation to <strong>${window.BUYER.email}</strong>. Add <strong>skills@chegg.com</strong> to your contacts so it doesn't get lost.`;
+          })();
+        </script>
+
+        <div class="confirm-cta">
+          <a class="mk-btn mk-btn-primary mk-btn-lg" href="Define.html">
+            Preview the prototype
+            <i class="fa-solid fa-arrow-right" style="font-size:13px;"></i>
+          </a>
+          <span class="confirm-cta-note">
+            <i class="fa-solid fa-circle-info"></i>
+            In production this opens after our team approves your access. We've left it unlocked here so you can see what's waiting.
+          </span>
+        </div>
+
+        <div class="confirm-suggestions">
+          <div class="suggest-label">In the meantime</div>
+
+          <a class="confirm-card" href="https://www.chegg.com/skills" target="_blank" rel="noopener">
+            <span class="ic"><i class="fa-solid fa-compass"></i></span>
+            <div class="body">
+              <div class="ttl">Explore Chegg Skills</div>
+              <div class="desc">See the programs, methodology, and learner outcomes behind the platform.</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+          </a>
+
+          <a class="confirm-card" href="#" target="_blank" rel="noopener">
+            <span class="ic"><i class="fa-regular fa-file-lines"></i></span>
+            <div class="body">
+              <div class="ttl">Read our Impact Report</div>
+              <div class="desc">How enterprise teams are using skilling programs to ship measurable outcomes.</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+          </a>
+
+          <a class="confirm-card" href="https://www.linkedin.com/company/chegg-skills/" target="_blank" rel="noopener">
+            <span class="ic"><i class="fa-brands fa-linkedin-in"></i></span>
+            <div class="body">
+              <div class="ttl">Follow Chegg Skills on LinkedIn</div>
+              <div class="desc">Practitioner-focused posts on agentic learning, methodology, and the work behind the work.</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="auth-foot">
+        <span><i class="fa-solid fa-shield-check"></i>SOC 2 · enterprise-ready</span>
+        <span class="sep"></span>
+        <span>Questions? <a href="mailto:skills@chegg.com" style="color: var(--fg-secondary); text-decoration: underline; text-underline-offset: 2px;">skills@chegg.com</a></span>
+      </div>
+    </section>
+
+    <aside class="mk-auth-visual" aria-hidden="true">
+      <div class="photo">
+        <img
+          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+          alt=""
+        />
+      </div>
+      <div class="pull-quote">
+        <div class="label">What happens next</div>
+        <p class="text">A short intro email, a <strong>20-minute walkthrough</strong>, and a workspace of your own — drafted around an outcome you're already chasing.</p>
+        <span class="byline">— Chegg Skills onboarding team</span>
+      </div>
+    </aside>
+
+  </main>
+
+  <nav class="demo-flow" aria-label="Prototype walkthrough">
+    <span class="demo-flow-label"><span class="dot"></span>Prototype walkthrough</span>
+    <a class="step" href="Marketing.html"><span class="num">1</span><span class="label">Marketing</span></a>
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <a class="step" href="Signup.html"><span class="num">2</span><span class="label">Sign-up</span></a>
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <a class="step active" href="SignupConfirmation.html"><span class="num">3</span><span class="label">Confirmation</span></a>
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <a class="step" href="Define.html"><span class="num">4</span><span class="label">Define</span></a>
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <a class="step" href="Measure.html"><span class="num">5</span><span class="label">Measure</span></a>
+    <a class="restart" href="Marketing.html" title="Restart walkthrough"><i class="fa-solid fa-rotate-left"></i><span class="label">Restart</span></a>
+  </nav>
+
+</body>
+</html>
